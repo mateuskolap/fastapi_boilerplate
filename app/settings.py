@@ -17,7 +17,11 @@ class DatabaseSettings(BaseSettings):
         )
 
 
-class Settings(DatabaseSettings):
+class AppSettings(BaseSettings):
+    LOCAL: str
+
+
+class Settings(DatabaseSettings, AppSettings):
     model_config = SettingsConfigDict(
         env_file='.env',
         env_file_encoding='utf-8',
