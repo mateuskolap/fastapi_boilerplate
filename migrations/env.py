@@ -8,7 +8,7 @@ from sqlalchemy import pool
 from alembic import context
 
 from app.settings import settings
-from app.models.base.table_registry import table_registry
+from app.db.table_registry import table_registry
 
 if sys.platform.startswith("win"):
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
