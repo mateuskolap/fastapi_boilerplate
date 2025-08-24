@@ -22,7 +22,6 @@ def get_user_repository(
 UserRepo = Annotated[UserRepository, Depends(get_user_repository)]
 
 
-
 @router.get('/', status_code=HTTPStatus.OK, response_model=UserList)
 async def list_users(
     user_repo: UserRepo,
